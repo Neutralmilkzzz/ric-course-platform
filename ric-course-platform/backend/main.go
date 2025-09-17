@@ -68,11 +68,7 @@ func main() {
 	s := &Server{pool: pool}
 
 	r := gin.Default()
-	// 前端静态文件
-	r.Static("/", "./static")
-	r.NoRoute(func(c *gin.Context) {
-    	c.File("./static/index.html")
-	})
+	
 
 
 	// CORS
@@ -102,7 +98,12 @@ func main() {
 		api.DELETE("/students/:id/courses/:courseId", s.removeCourseForStudent)
 
 	}
-
+	// 前端静态文件
+	r.Static("/", "./static")
+	r.NoRoute(func(c *gin.Context) {
+    	c.File("./static/index.html")
+	})
+	
 	port := mustGetEnv("PORT", "8080")
 	addr := fmt.Sprintf("0.0.0.0:%s", port)
 	log.Printf("Server listening on %s", addr)
