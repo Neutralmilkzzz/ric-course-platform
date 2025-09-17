@@ -98,11 +98,15 @@ func main() {
 		api.DELETE("/students/:id/courses/:courseId", s.removeCourseForStudent)
 
 	}
-	// 前端静态文件
-	r.Static("/", "./static")
+
 	r.NoRoute(func(c *gin.Context) {
-    	c.File("./static/index.html")
+		if strings.HasPrefix(c.Request.URL.Path, "/api") {
+			c.JSON(http.StatusNotFound, gin.H{"error": "API route not found"})
+			return
+		}
+		c.File("./static/index.html")
 	})
+	r.Static("/", "./static")
 	
 	port := mustGetEnv("PORT", "8080")
 	addr := fmt.Sprintf("0.0.0.0:%s", port)
