@@ -68,6 +68,12 @@ func main() {
 	s := &Server{pool: pool}
 
 	r := gin.Default()
+	// 前端静态文件
+	r.Static("/", "./static")
+	r.NoRoute(func(c *gin.Context) {
+    	c.File("./static/index.html")
+	})
+
 
 	// CORS
 	corsOrigins := mustGetEnv("CORS_ORIGINS", "*")
