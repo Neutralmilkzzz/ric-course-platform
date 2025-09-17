@@ -1,4 +1,4 @@
-module example.com/ric-course-platform
+module github.com/Neutralmilkzzz/ric-course-platform/backend
 
 go 1.23.0
 
