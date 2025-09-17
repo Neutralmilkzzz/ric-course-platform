@@ -1,0 +1,76 @@
+/* 主容器的基础样式 */
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #fff;
+}
+
+/* 新增学生输入框和按钮 */
+.add-student input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: rgba(10, 25, 47, 0.9); /* 深蓝黑背景 */
+  color: #fff;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.add-student input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+.add-student button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e90ff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-student button:hover {
+  background-color: #187bcd;
+}
+
+/* AI 推荐模块 */
+.recommend-container input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: rgba(10, 25, 47, 0.9);
+  color: #fff;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.recommend-container input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+.recommend-container button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e90ff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.recommend-container button:hover {
+  background-color: #187bcd;
+}
+
+.answer-box {
+  white-space: pre-wrap;
+  background: #243057;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 12px;
+}

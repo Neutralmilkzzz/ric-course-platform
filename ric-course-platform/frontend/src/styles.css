@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 0; background: #0b1020; color: #e6e8ef; }
+.container { max-width: 920px; margin: 32px auto; padding: 0 16px; }
+h1 { margin: 0 0 16px; font-size: 28px; }
+.toolbar { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
+button { padding: 8px 12px; border: none; border-radius: 8px; background: #2b5fd9; color: white; cursor: pointer; }
+button:hover { filter: brightness(1.1); }
+select { margin-left: 8px; padding: 6px 10px; border-radius: 8px; border: 1px solid #3a3f58; background: #121933; color: #e6e8ef; }
+.summary { margin: 12px 0 8px; }
+table { width: 100%; border-collapse: collapse; background: #0d1530; border: 1px solid #243057; border-radius: 12px; overflow: hidden; }
+th, td { padding: 10px 12px; border-bottom: 1px solid #1c2442; }
+th { text-align: left; background: #111a39; }
+tr:hover td { background: #0f1a3a; }
+footer { margin-top: 24px; opacity: 0.8; }
