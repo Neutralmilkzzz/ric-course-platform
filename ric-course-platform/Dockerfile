@@ -5,7 +5,7 @@ COPY frontend/ .
 RUN npm install && npm run build
 
 # Step 2: Build Go 后端
-FROM golang:1.21 AS backend-builder
+FROM golang:1.23-alpine AS backend-builder
 WORKDIR /app/backend
 COPY backend/ .
 # 把 React build 结果复制到 Go 的 static 文件夹
