@@ -1,4 +1,4 @@
-const BASE = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080';
+const BASE = process.env.REACT_APP_API_BASE_URL || "https://ric-course-platform-3.onrender.com/";
 
 export async function fetchCourses() {
   const res = await fetch(`${BASE}/api/courses`);
