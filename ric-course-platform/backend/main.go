@@ -106,7 +106,6 @@ func main() {
 		}
 		c.File("./static/index.html")
 	})
-	r.Static("/", "./static")
 	
 	port := mustGetEnv("PORT", "8080")
 	addr := fmt.Sprintf("0.0.0.0:%s", port)
